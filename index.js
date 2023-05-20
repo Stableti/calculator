@@ -10,3 +10,11 @@ let operationClicked = false;
 let currentOperand = "";
 let pastOperand = "";
 let currentOperation = null;
+
+numbers.forEach((number) => {
+  number.addEventListener("click", () => {
+    displayPast();
+    currentOperand += number.textContent;
+    displayCurrent(currentOperand);
+  });
+});
