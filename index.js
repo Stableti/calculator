@@ -22,3 +22,17 @@ numbers.forEach((number) => {
 function displayCurrent(current) {
   currentValue.textContent = current;
 }
+
+function displayPast() {
+  if (operationClicked) {
+    pastOperand = currentValue.textContent;
+    pastValue.textContent = pastOperand;
+    pastOperand = currentValue.textContent.substring(
+      0,
+      currentOperand.length - 0
+    );
+    currentOperand = "";
+    currentValue.textContent = `${currentOperand} ${currentOperation}`;
+    operationClicked = false;
+  }
+}
