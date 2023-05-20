@@ -36,3 +36,11 @@ function displayPast() {
     operationClicked = false;
   }
 }
+
+operators.forEach((operator) => {
+  operator.addEventListener("click", () => {
+    currentOperation = operator.textContent;
+    currentValue.textContent = `${currentOperand} ${currentOperation}`;
+    operationClicked = true;
+  });
+});
