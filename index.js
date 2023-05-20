@@ -18,3 +18,7 @@ numbers.forEach((number) => {
     displayCurrent(currentOperand);
   });
 });
+
+function displayCurrent(current) {
+  currentValue.textContent = current;
+}
