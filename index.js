@@ -51,3 +51,8 @@ allClear.addEventListener("click", () => {
   currentValue.innerHTML = currentOperand;
   pastValue.innerHTML = pastOperand;
 });
+
+erase.addEventListener("click", () => {
+  currentOperand = currentOperand.substring(0, currentOperand.length - 1);
+  currentValue.textContent = currentOperand;
+});
