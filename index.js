@@ -57,4 +57,30 @@ erase.addEventListener("click", () => {
   currentValue.textContent = currentOperand;
 });
 
-equals.addEventListener("click", () => {});
+equals.addEventListener("click", () => {
+  let result;
+  
+  switch (currentOperation) {
+    case "+":
+      result = parseFloat(pastOperand) + parseFloat(currentOperand);
+      break;
+    case "-":
+      result = parseFloat(pastOperand) - parseFloat(currentOperand);
+      break;
+    case "×":
+      result = parseFloat(pastOperand) * parseFloat(currentOperand);
+      break;
+    case "÷":
+      result = parseFloat(pastOperand) / parseFloat(currentOperand);
+      break;
+    case "%":
+      if (pastOperand === "") {
+        result = parseFloat(currentOperand) / 100;
+      } else {
+        result = parseFloat(pastOperand) % parseFloat(currentOperand);
+      }
+      break;
+    default:
+      return;
+  }
+});
