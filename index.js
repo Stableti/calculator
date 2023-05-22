@@ -44,3 +44,10 @@ operators.forEach((operator) => {
     operationClicked = true;
   });
 });
+
+allClear.addEventListener("click", () => {
+  currentOperand = "";
+  pastOperand = "";
+  currentValue.innerHTML = currentOperand;
+  pastValue.innerHTML = pastOperand;
+});
