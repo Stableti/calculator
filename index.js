@@ -56,3 +56,5 @@ erase.addEventListener("click", () => {
   currentOperand = currentOperand.substring(0, currentOperand.length - 1);
   currentValue.textContent = currentOperand;
 });
+
+equals.addEventListener("click", () => {});
