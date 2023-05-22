@@ -83,4 +83,10 @@ equals.addEventListener("click", () => {
     default:
       return;
   }
+  currentOperand = result.toString();
+  displayCurrent(currentOperand);
+
+  pastValue.textContent = "";
+
+  operationClicked = false;
 });
